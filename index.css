@@ -1,0 +1,155 @@
+@import url('httpps://fonts.googleapis.com/css2?family=Big+Shoulder+Display:wght@700&family=Lexand+Deca&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ddd;
+    font-family: 'lexend Deca' sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    color: hsl(0, 0%, 95%);
+    padding: 5em 0;
+    margin:0 auto;
+    font-size:15px;
+    line-height:1.5;
+
+}
+.card-boxes{
+    display:flex;
+    flex-wrap:wrap ;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.card{
+    display: flex;
+    flex-direction:column ;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 300px;
+    padding: 3em;
+    flex-grow: 1;
+}
+
+h1{
+    font-family: 'Big Shoulders Display',cursive;
+    font-size: 2.5em;
+
+}
+
+.card p{
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.card>*{
+    margin-bottom: 25px;
+}
+
+button{
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 0 !important;
+    cursor: pointer;
+}
+
+.card-sedans{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 5px 0 0 5px;
+}
+
+.card-sedans button{
+    color: hsl(31, 77%, 52%);
+}
+.card-suvs{
+background-color: hsl(184, 100%, 22%);
+
+}
+.card-sedans button{
+    color: hsl(184, 100%, 22%);
+}
+
+
+.card-luxury{
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 5px 5px 0;
+}
+
+.card-luxury button{
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    transition: 0.3s;
+}
+
+/*Media query for mobile*/
+@media screen and (max-width:800px) {
+ .container{
+padding: 2em;
+ }
+   
+ .card-sedans{
+    border-radius: 5px 0 0 0;
+ }
+.card-suvs{
+    border-radius: 0 5px 0 0;
+}
+
+.card-luxury{
+    border-radius: 0 0 5px 5px;
+}
+
+}
+@media screen and (max-width: 500px){
+    .card-sedans{
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card-suvs{
+        border-radius: 0;
+    }
+}
+
+/*Link to Grid Task*/
+a{
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+a:hover:after{
+    transform: scaleX(1);
+    transform-origin:bottom left ;
+}
